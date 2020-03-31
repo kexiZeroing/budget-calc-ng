@@ -1,5 +1,13 @@
 # BudgetCalcNg
 
+Learn Angular from https://www.youtube.com/watch?v=sU4z4Ti-8OQ
+
+### keypoints
+- Create project: `ng new budget-calc-ng --style=scss --routing=true`
+- Sass have two syntaxes: a newer one is SCSS and an older one is the original Sass.
+- **Bulma** is a free, open source CSS framework based on Flexbox. `npm i bulma`
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
 
 ## Development server
