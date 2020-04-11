@@ -1,4 +1,31 @@
 <!-- refer Bulma to have a form -->
-<p>
-  add-item-form works!
-</p>
+<!-- 
+  By default, when we import angular forms, FormsModule will convert our form tags to angular forms. But we also need to create a template reference variable which stores this form object that angular has created for us.
+
+  The variable `itemForm` is now a reference to the NgForm directive that governs the form as a whole. 
+-->
+<form #itemForm="ngForm" (ngSubmit)="onSubmit(itemForm)">
+  <div class="field is-horizontal">
+    <div class="field-body">
+
+      <div class="field is-narrow">
+        <p class="control">
+          <input type="number" name="amount" class="input" style="width: 100px;" placeholder="Amount" required [ngModel]="item.amount">
+        </p>
+      </div>
+
+      <div class="field">
+        <p class="control">
+          <input type="text" name="description" class="input" placeholder="Description" required [ngModel]="item.description">
+        </p>
+      </div> 
+
+      <div class="field is-narrow">
+        <button type="submit" class="button is-primary">
+          <p>Add</p>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</form>
