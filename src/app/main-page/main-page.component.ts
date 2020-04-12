@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BudgetItem } from 'src/shared/models/budget-item.model';
+// Interface UpdateEvent is exported in budget-item-list (UpdateEvent is a new data type)
+import { UpdateEvent } from '../budget-item-list/budget-item-list.component';
 
 @Component({
   selector: 'app-main-page',
@@ -25,6 +27,15 @@ export class MainPageComponent implements OnInit {
     let index = this.budgetItems.indexOf(item);
     this.budgetItems.splice(index, 1);
     this.totalBudget -= item.amount;
+  }
+
+  updateItem(updateEvent: UpdateEvent) {
+    // update the array
+    this.budgetItems[this.budgetItems.indexOf(updateEvent.old)] = updateEvent.new;
+
+    // update the total budget
+    this.totalBudget -= updateEvent.old.amount;
+    this.totalBudget += updateEvent.new.amount;
   }
 
 }

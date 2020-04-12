@@ -10,23 +10,44 @@
 
       <div class="field is-narrow">
         <p class="control">
-          <input type="number" name="amount" class="input" style="width: 100px;" placeholder="Amount" required [ngModel]="item.amount">
+          <input
+            type="number"
+            name="amount"
+            class="input"
+            style="width: 100px;"
+            placeholder="Amount"
+            required
+            [ngModel]="item.amount"
+          />
         </p>
       </div>
 
       <div class="field">
         <p class="control">
-          <input type="text" name="description" class="input" placeholder="Description" required [ngModel]="item.description">
+          <input
+            type="text"
+            name="description"
+            class="input"
+            placeholder="Description"
+            required
+            [ngModel]="item.description"
+          />
         </p>
-      </div> 
+      </div>
 
       <div class="field is-narrow">
         <!-- only can click button when ngForm is valid (ngForm has `valid` property) -->
-        <button type="submit" class="button is-primary" [disabled]="!itemForm.valid">
-          <p>Add</p>
+        <button
+          type="submit"
+          class="button"
+          [ngClass]="{ 'is-primary': isNewItem, 'is-success': !isNewItem }"
+          [disabled]="!itemForm.valid"
+        >
+          <p *ngIf="isNewItem">Add</p>
+          <p *ngIf="!isNewItem">Save</p>
         </button>
       </div>
-
+      
     </div>
   </div>
 </form>
