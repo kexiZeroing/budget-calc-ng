@@ -10,4 +10,5 @@ Learn Angular from the video: https://www.youtube.com/watch?v=sU4z4Ti-8OQ
 - `shared/models` are models (structured data) used by all components. Only have one model `budget-item.model.ts` for this project.
 - Use porperty binding to pass data **from parent to children**. Use `[xx]` in parent's template and `@Input` in children's ts file.
 - Deliver event (with data) from **children to parent**. Use @Output to create `EventEmitter` and emit it (with data) in children component and this event can be received in it's selector tag in the parent's template.
-- Use Angular Material (https://material.angular.io/): `ng add @angular/material` to create the modal dialog with a component, and update `app.module.ts` file to import the needed module. 
+- Use Angular Material (https://material.angular.io/): `ng add @angular/material` to create the modal dialog with a component (component loaded into a dialog). Also need to update `app.module.ts` file to import the needed module and point out the entryComponents.
+- Create `interface` to have a new kind of data type (may also export it), and it can be passed as data in the EventEmitter.
