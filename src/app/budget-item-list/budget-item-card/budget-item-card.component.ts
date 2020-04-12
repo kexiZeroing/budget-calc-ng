@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { BudgetItem } from 'src/shared/models/budget-item.model';
 
 @Component({
   selector: 'app-budget-item-card',
@@ -7,8 +8,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class BudgetItemCardComponent implements OnInit {
 
-  // input decorator from @angular/core, create a property that can be input into the component using property binding (given from parent)
-  @Input() isIncome: boolean = true;
+  // @Input decorator from @angular/core, create a property that can be input into the component using property binding (given from parent)
+  @Input() item: BudgetItem;
 
   constructor() { }
 

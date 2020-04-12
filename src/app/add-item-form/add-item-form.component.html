@@ -21,7 +21,8 @@
       </div> 
 
       <div class="field is-narrow">
-        <button type="submit" class="button is-primary">
+        <!-- only can click button when ngForm is valid (ngForm has `valid` property) -->
+        <button type="submit" class="button is-primary" [disabled]="!itemForm.valid">
           <p>Add</p>
         </button>
       </div>
