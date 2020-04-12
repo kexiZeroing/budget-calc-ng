@@ -18,3 +18,4 @@ Learn Angular from the video: https://www.youtube.com/watch?v=sU4z4Ti-8OQ
 - Install Surge `npm install -g surge` and go to the project directory.
 - Build application (`ng build`) for production environment so that we get a index.html file in `/dist` folder which we will use as single point entry to our application.
 - Navigate to the dist folder and run `surge`, then you will successfully deployed the angular app.
+- Visit this deployed application: http://budget-calc.surge.sh/
