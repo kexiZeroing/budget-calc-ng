@@ -12,3 +12,9 @@ Learn Angular from the video: https://www.youtube.com/watch?v=sU4z4Ti-8OQ
 - Deliver event (with data) from **children to parent**. Use @Output to create `EventEmitter` and emit it (with data) in children component and this event can be received in it's selector tag in the parent's template.
 - Use Angular Material (https://material.angular.io/): `ng add @angular/material` to create the modal dialog with a component (component loaded into a dialog). Also need to update `app.module.ts` file to import the needed module and point out the entryComponents.
 - Create `interface` to have a new kind of data type (may also export it), and it can be passed as data in the EventEmitter.
+
+### Deploy on Surge
+- Dedicated to front-end developers: Netlify and Surge.
+- Install Surge `npm install -g surge` and go to the project directory.
+- Build application (`npm build`) for production environment so that we get a index.html file in `/dist` folder which we will use as single point entry to our application.
+- Navigate to the dist folder and run `surge`, then you will successfully deployed the angular app.
